@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>粼青之海</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ 书架页 ============ -->
+  <div id="bookshelf">
+    <header class="shelf-header">
+      <div class="shelf-title"><img class="shelf-logo" src="data:image/png;base64,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" alt="">书架</div>
+      <button id="btn-import" class="btn-primary">＋ 导入书籍</button>
+    </header>
+    <div id="shelf-grid" class="shelf-grid"></div>
+    <div id="shelf-empty" class="shelf-empty">书架空空如也，点击右上角「导入书籍」添加本地 EPUB / TXT</div>
+    <input type="file" id="file-input" accept=".epub,.txt" hidden>
+  </div>
+
+  <!-- ============ 阅读页 ============ -->
+  <div id="reader" class="hidden theme-day">
+
+    <!-- 顶部导航栏（默认隐藏） -->
+    <div id="reader-topbar" class="reader-bar topbar hidden">
+      <button id="btn-back" class="icon-btn">‹ 返回</button>
+      <div id="reader-title" class="reader-title">书名</div>
+      <button id="btn-search" class="icon-btn" title="搜索">🔍</button>
+      <button id="btn-bookmark" class="icon-btn bookmark" title="添加书签">🔖</button>
+    </div>
+
+    <!-- 阅读内容区 -->
+    <div id="reader-content">
+      <!-- TXT 分页页 -->
+      <div id="txt-page" class="page dual"></div>
+      <!-- EPUB 渲染容器 -->
+      <div id="epub-view" class="hidden"></div>
+      <!-- EPUB 左右翻页点击区（仅 EPUB 模式显示） -->
+      <div id="epub-zone-left" class="epub-zone left hidden"></div>
+      <div id="epub-zone-right" class="epub-zone right hidden"></div>
+      <!-- 章节浮层提示 -->
+      <div id="chapter-label" class="chapter-label"></div>
+    </div>
+
+    <!-- 页数标识（右下角常驻显示：当前页 / 总页数） -->
+    <div id="page-corner" class="page-corner"></div>
+
+    <!-- 底部操作栏（默认隐藏） -->
+    <div id="reader-bottombar" class="reader-bar bottombar hidden">
+      <button id="btn-toc" class="bar-btn">目录</button>
+      <div class="slider-wrap">
+        <input type="range" id="progress-slider" min="0" max="1000" value="0">
+        <div class="progress-hint">
+          <span id="progress-label">0.0%</span>
+          <span id="page-indicator"></span>
+        </div>
+      </div>
+      <button id="btn-notes" class="bar-btn">笔记</button>
+      <button id="btn-settings" class="bar-btn">设置</button>
+    </div>
+
+    <!-- 目录抽屉（左侧） -->
+    <div id="panel-toc" class="side-panel left hidden">
+      <div class="panel-header">目录</div>
+      <div id="toc-list" class="panel-body"></div>
+    </div>
+
+    <!-- 笔记 / 摘录抽屉（右侧） -->
+    <div id="panel-notes" class="side-panel right hidden">
+      <div class="panel-header">笔记与摘录</div>
+      <div class="panel-tabs">
+        <button class="tab active" data-tab="highlights">摘录与笔记</button>
+        <button class="tab" data-tab="bookmarks">书签</button>
+        <button class="tab" data-tab="reflections">感想</button>
+      </div>
+      <div id="notes-list" class="panel-body"></div>
+    </div>
+
+    <!-- 阅读设置面板（底部弹出） -->
+    <div id="panel-settings" class="bottom-panel hidden">
+      <div class="settings-row">
+        <span class="settings-label">字号</span>
+        <button id="font-dec" class="round-btn">A-</button>
+        <span id="font-size-val" class="settings-value">20</span>
+        <button id="font-inc" class="round-btn">A+</button>
+      </div>
+      <div class="settings-row">
+        <span class="settings-label">行距</span>
+        <input type="range" id="line-height-slider" min="1.4" max="2.4" step="0.1" value="1.8">
+        <span id="line-height-val" class="settings-value">1.8</span>
+      </div>
+      <div class="settings-row">
+        <span class="settings-label">边距</span>
+        <input type="range" id="margin-slider" min="32" max="120" step="4" value="64">
+        <span id="margin-val" class="settings-value">64</span>
+      </div>
+      <div class="settings-row">
+        <span class="settings-label">字重</span>
+        <div class="seg-group">
+          <button class="seg-btn" data-weight="400">常规</button>
+          <button class="seg-btn" data-weight="500">中等</button>
+          <button class="seg-btn" data-weight="700">加粗</button>
+        </div>
+      </div>
+      <div class="settings-row themes-row">
+        <span class="settings-label">主题</span>
+        <div class="theme-swatch day" data-theme="day" title="纯白日间"></div>
+        <div class="theme-swatch sepia" data-theme="sepia" title="护眼米色"></div>
+        <div class="theme-swatch green" data-theme="green" title="护眼绿"></div>
+        <div class="theme-swatch gray" data-theme="gray" title="浅灰"></div>
+        <div class="theme-swatch blue" data-theme="blue" title="雾蓝"></div>
+        <div class="theme-swatch night" data-theme="night" title="纯黑夜间"></div>
+        <div class="theme-swatch paper" data-theme="paper" title="纸质感"></div>
+      </div>
+    </div>
+
+    <!-- 划词悬浮菜单 -->
+    <div id="selection-menu" class="selection-menu hidden">
+      <button data-action="highlight">划线</button>
+      <button data-action="note">写想法</button>
+      <button data-action="copy">复制</button>
+    </div>
+
+    <!-- 笔记编辑弹窗 -->
+    <div id="note-modal" class="modal hidden">
+      <div class="modal-box">
+        <div class="modal-header">
+          <span>写想法</span>
+          <button id="note-close" class="icon-btn">×</button>
+        </div>
+        <div id="note-quote" class="note-quote"></div>
+        <textarea id="note-input" placeholder="写下你的想法…"></textarea>
+        <div class="modal-footer">
+          <button id="note-cancel" class="btn-ghost">取消</button>
+          <button id="note-save" class="btn-primary">保存</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 搜索面板（全屏） -->
+    <div id="search-panel" class="search-panel hidden">
+      <div class="search-header">
+        <input id="search-input" type="text" placeholder="输入关键字，搜索全书">
+        <button id="search-close" class="icon-btn">取消</button>
+      </div>
+      <div id="search-results" class="search-results"></div>
+    </div>
+
+    <!-- 遮罩 -->
+    <div id="overlay" class="overlay hidden"></div>
+  </div>
+
+  <!-- 编辑书籍信息弹窗（重命名 / 修改作者） -->
+  <div id="rename-modal" class="modal modal-fixed hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <span>编辑书籍信息</span>
+        <button id="rename-close" class="icon-btn">×</button>
+      </div>
+      <label class="edit-label" for="rename-input">书名</label>
+      <input id="rename-input" type="text" placeholder="输入书名" maxlength="80">
+      <label class="edit-label" for="rename-author">作者</label>
+      <input id="rename-author" type="text" placeholder="输入作者" maxlength="60">
+      <div class="modal-footer">
+        <button id="rename-cancel" class="btn-ghost">取消</button>
+        <button id="rename-save" class="btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 书籍右键菜单 -->
+  <div id="book-menu" class="book-menu hidden">
+    <button class="book-menu-item" data-action="cover">上传封面</button>
+    <button class="book-menu-item" data-action="rename">重命名</button>
+    <button class="book-menu-item" data-action="author">修改作者</button>
+  </div>
+
+  <!-- 封面上传（图片） -->
+  <input type="file" id="cover-input" accept="image/*" hidden>
+
+  <!-- 轻提示 -->
+  <div id="toast" class="toast"></div>
+
+  <!-- epub.js（解析 EPUB，需联网加载；可下载到本地 lib/ 后改 src） -->
+  <script src="https://cdn.jsdelivr.net/npm/epubjs@0.3.93/dist/epub.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
